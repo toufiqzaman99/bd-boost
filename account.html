@@ -1,0 +1,2309 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>আমার অর্ডার — Thunder Maxit</title>
+  <meta name="theme-color" content="#1877F2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%231877F2'/%3E%3Cstop offset='1' stop-color='%237C3AED'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M37 6 17 36h13l-3 22 20-31H34l3-21Z' fill='white'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --blue: #1877F2;
+      --blue-dark: #0E60CC;
+      --blue-soft: #EAF2FF;
+      --purple: #7C3AED;
+      --purple-soft: #F1EAFF;
+      --green: #0E8B4B;
+      --green-soft: #E9F9F1;
+      --red: #B42318;
+      --red-soft: #FFF1F0;
+      --amber: #9A5B00;
+      --amber-soft: #FFF6E5;
+      --ink: #0B1B33;
+      --ink-soft: #233653;
+      --body-text: #53657E;
+      --muted: #5D6F87;
+      --line: #E3EBF5;
+      --line-strong: #CAD7E7;
+      --bg: #F6F9FF;
+      --white: #FFFFFF;
+      --shadow-sm: 0 5px 18px rgba(11, 27, 51, .05);
+      --shadow-md: 0 22px 55px rgba(20, 53, 102, .12);
+      --font-ui: "Poppins", "Hind Siliguri", sans-serif;
+      --font-bn: "Hind Siliguri", "Poppins", sans-serif;
+      --ease: cubic-bezier(.22, 1, .36, 1);
+      --header-h: 68px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      min-width: 320px;
+      color: var(--ink);
+      background:
+        radial-gradient(800px 500px at 95% -10%, rgba(124, 58, 237, .06), transparent 68%),
+        radial-gradient(720px 440px at -8% 24%, rgba(24, 119, 242, .075), transparent 66%),
+        var(--bg);
+      font-family: var(--font-bn);
+      font-size: 15px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    html[lang="en"] body { font-family: var(--font-ui); }
+    h1, h2, h3, p { margin: 0; }
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; }
+    button { color: inherit; border: 0; background: none; cursor: pointer; }
+    img, svg { display: block; max-width: 100%; }
+    [hidden] { display: none !important; }
+    :focus-visible { outline: 3px solid rgba(24, 119, 242, .5); outline-offset: 3px; border-radius: 7px; }
+    ::selection { background: rgba(24, 119, 242, .18); }
+    .sr-only {
+      position: absolute !important;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0);
+      white-space: nowrap; border: 0;
+    }
+    .skip-link {
+      position: fixed;
+      top: 9px; left: 9px;
+      z-index: 300;
+      padding: 9px 14px;
+      border-radius: 9px;
+      color: #fff;
+      background: var(--ink);
+      transform: translateY(-160%);
+      transition: transform .2s ease;
+    }
+    .skip-link:focus { transform: translateY(0); }
+    .container { width: min(100% - 32px, 1120px); margin-inline: auto; }
+
+    /* Shared */
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      border-radius: 10px;
+    }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      flex: 0 0 auto;
+      border-radius: 11px;
+      color: #fff;
+      background: linear-gradient(135deg, #1877F2, #6246E1 62%, #7C3AED);
+      box-shadow: 0 6px 17px rgba(24, 119, 242, .24);
+    }
+    .brand-mark svg { width: 20px; height: 20px; }
+    .brand-name {
+      color: var(--ink);
+      font-family: var(--font-ui);
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -.045em;
+      white-space: nowrap;
+    }
+    .brand-name > span {
+      color: transparent;
+      background: linear-gradient(95deg, var(--blue), var(--purple));
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 11px 17px;
+      border: 1px solid transparent;
+      border-radius: 11px;
+      font-family: var(--font-ui);
+      font-size: 12.5px;
+      font-weight: 600;
+      line-height: 1.3;
+      white-space: nowrap;
+      transition: transform .2s var(--ease), background .2s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    html[lang="bn"] .btn { font-family: var(--font-bn); }
+    .btn svg { width: 16px; height: 16px; flex: 0 0 auto; }
+    .btn-primary {
+      color: #fff;
+      background-image: linear-gradient(110deg, #0B5CC8, #1468D4 32%, #5C3FD9 70%, #7C3AED);
+      background-size: 180% 100%;
+      background-position: 0 50%;
+      box-shadow: 0 10px 23px rgba(24, 119, 242, .23);
+    }
+    .btn-primary:hover { background-position: 100% 50%; transform: translateY(-1px); box-shadow: 0 13px 28px rgba(76, 60, 203, .27); }
+    .btn-secondary {
+      color: var(--ink-soft);
+      border-color: var(--line);
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(11, 27, 51, .035);
+    }
+    .btn-secondary:hover { color: var(--blue-dark); border-color: #BAD0EB; transform: translateY(-1px); }
+    .btn:disabled { cursor: wait; opacity: .72; transform: none !important; }
+    .btn .spinner { display: none; }
+    .btn.loading .spinner { display: block; }
+    .btn.loading .btn-icon { display: none; }
+    .spinner {
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(24, 119, 242, .2);
+      border-top-color: var(--blue);
+      border-radius: 50%;
+      flex: 0 0 auto;
+      animation: spin .72s linear infinite;
+    }
+    .btn .spinner { border-color: rgba(255,255,255,.35); border-top-color: #fff; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--blue-dark);
+      font-size: 10px;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    html[lang="bn"] .eyebrow { font-family: var(--font-bn); font-size: 11px; letter-spacing: .02em; }
+    .eyebrow::before {
+      content: "";
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(224, 234, 245, .85);
+      background: rgba(255, 255, 255, .91);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+    }
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      height: var(--header-h);
+    }
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: auto;
+    }
+    .lang-toggle {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 2px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      transition: border-color .2s ease, box-shadow .2s ease;
+    }
+    .lang-toggle:hover { border-color: #BBD2F0; box-shadow: var(--shadow-sm); }
+    .lang-opt {
+      display: inline-grid;
+      place-items: center;
+      min-width: 31px;
+      height: 34px;
+      padding: 0 7px;
+      border-radius: 999px;
+      color: #566B85;
+      font-family: var(--font-ui);
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 1;
+    }
+    html[lang="bn"] .lang-bn,
+    html[lang="en"] .lang-en {
+      color: #fff;
+      background: linear-gradient(135deg, #0B5CC8, #5C3FD9);
+      box-shadow: 0 3px 9px rgba(24, 119, 242, .22);
+    }
+    .logout-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      min-height: 40px;
+      padding: 8px 11px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      color: #5D6F87;
+      background: #fff;
+      font-size: 10.5px;
+      font-weight: 600;
+      transition: color .2s ease, border-color .2s ease, background .2s ease;
+    }
+    .logout-btn:hover { color: var(--red); border-color: #F1C9C5; background: #FFF9F8; }
+    .logout-btn svg { width: 15px; height: 15px; }
+    .user-chip {
+      display: none;
+      align-items: center;
+      gap: 7px;
+      max-width: 180px;
+      padding: 3px 9px 3px 3px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+    }
+    .user-avatar {
+      display: grid;
+      place-items: center;
+      width: 31px;
+      height: 31px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      color: #fff;
+      background: linear-gradient(135deg, #1B6EE0, #7653DF);
+      font-family: var(--font-ui);
+      font-size: 9px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .user-name {
+      min-width: 0;
+      overflow: hidden;
+      color: var(--ink-soft);
+      font-size: 10.5px;
+      font-weight: 500;
+      line-height: 1.3;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    /* Boot */
+    .boot-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 120;
+      display: grid;
+      place-items: center;
+      background: #F8FBFF;
+    }
+    .boot-inner { display: grid; justify-items: center; gap: 14px; }
+    .boot-spinner {
+      width: 24px; height: 24px;
+      border: 2.5px solid rgba(24, 119, 242, .2);
+      border-top-color: var(--blue);
+      border-radius: 50%;
+      animation: spin .75s linear infinite;
+    }
+    .boot-text { color: var(--muted); font-size: 10.5px; font-weight: 500; line-height: 1.5; }
+
+    /* Auth layout */
+    .auth-view { padding: 42px 0 58px; }
+    .auth-layout { display: grid; gap: 30px; align-items: center; }
+    .auth-intro { max-width: 610px; }
+    @media (max-width: 899px) {
+      .preview-card, .benefits { display: none; }
+      .auth-intro h1 { max-width: 560px; }
+      .auth-intro .auth-lead { max-width: 560px; }
+    }
+    .auth-intro h1 {
+      margin: 12px 0 11px;
+      color: var(--ink);
+      font-size: clamp(2.05rem, 6vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.27;
+      letter-spacing: -.03em;
+    }
+    html[lang="en"] .auth-intro h1 {
+      font-family: var(--font-ui);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -.055em;
+    }
+    .auth-lead {
+      max-width: 510px;
+      color: var(--body-text);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .preview-card {
+      position: relative;
+      margin-top: 26px;
+      padding: 17px;
+      border: 1px solid #E2ECF8;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, .88);
+      box-shadow: 0 18px 44px rgba(22, 63, 120, .1);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+    }
+    .preview-card::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 18px -10px -10px 32px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(24, 119, 242, .12), rgba(124, 58, 237, .1));
+      filter: blur(6px);
+    }
+    .preview-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #EFF4FA;
+    }
+    .preview-icon {
+      display: grid;
+      place-items: center;
+      width: 35px; height: 35px;
+      flex: 0 0 auto;
+      border-radius: 10px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--blue), var(--purple));
+    }
+    .preview-icon svg { width: 18px; height: 18px; }
+    .preview-title { min-width: 0; flex: 1; }
+    .preview-title span { display: block; color: var(--muted); font-size: 8px; line-height: 1.4; }
+    .preview-title strong {
+      display: block;
+      margin-top: 1px;
+      color: var(--ink-soft);
+      font-family: var(--font-bn);
+      font-size: 11.5px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    .preview-status {
+      flex: 0 0 auto;
+      padding: 4px 8px;
+      border-radius: 999px;
+      color: var(--blue-dark);
+      background: var(--blue-soft);
+      font-size: 7.5px;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .mini-tracker {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 14px;
+    }
+    .mini-line {
+      position: absolute;
+      top: 11px;
+      right: 16.66%;
+      left: 16.66%;
+      height: 2px;
+      border-radius: 99px;
+      background: #E7EFF8;
+      overflow: hidden;
+    }
+    .mini-line span { display: block; width: 50%; height: 100%; background: linear-gradient(90deg, var(--blue), var(--purple)); }
+    .mini-step { position: relative; z-index: 1; display: grid; justify-items: center; gap: 6px; }
+    .mini-dot {
+      display: grid;
+      place-items: center;
+      width: 24px; height: 24px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      color: #5D6F87;
+      background: #EDF3FA;
+      font-family: var(--font-ui);
+      font-size: 8px;
+      font-weight: 600;
+      box-shadow: 0 0 0 1px #E3EBF5;
+    }
+    .mini-step.done .mini-dot { color: #fff; background: var(--green); box-shadow: 0 0 0 1px var(--green); }
+    .mini-step.active .mini-dot { color: var(--blue-dark); background: #EAF3FF; box-shadow: 0 0 0 1px #9EC6FA, 0 0 0 5px rgba(24, 119, 242, .07); }
+    .mini-dot svg { width: 11px; height: 11px; }
+    .mini-step > span:last-child { color: #5D6F87; font-size: 8px; line-height: 1.4; text-align: center; }
+    .preview-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 13px;
+      padding-top: 11px;
+      border-top: 1px solid #EFF4FA;
+      color: var(--muted);
+      font-family: var(--font-ui);
+      font-size: 8px;
+      line-height: 1.4;
+    }
+    .benefits {
+      display: grid;
+      gap: 10px;
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .benefit {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      color: var(--body-text);
+      font-size: 11px;
+      line-height: 1.65;
+    }
+    .benefit-icon {
+      display: grid;
+      place-items: center;
+      width: 24px; height: 24px;
+      flex: 0 0 auto;
+      margin-top: 0;
+      border-radius: 7px;
+      color: var(--blue-dark);
+      background: var(--blue-soft);
+    }
+    .benefit svg { width: 13px; height: 13px; }
+    .benefit strong { display: block; color: var(--ink-soft); font-size: 11.5px; font-weight: 600; line-height: 1.45; }
+    .benefit span { display: block; }
+    .auth-card {
+      width: 100%;
+      max-width: 440px;
+      margin-inline: auto;
+      padding: 22px 19px 20px;
+      border: 1px solid rgba(221, 233, 247, .95);
+      border-radius: 21px;
+      background: rgba(255, 255, 255, .95);
+      box-shadow: var(--shadow-md);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+    }
+    .auth-tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3px;
+      padding: 3px;
+      border-radius: 10px;
+      background: #F3F7FC;
+    }
+    .auth-tab {
+      min-height: 42px;
+      padding: 8px;
+      border-radius: 8px;
+      color: #5D6F87;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1.3;
+      transition: color .2s ease, background .2s ease, box-shadow .2s ease;
+    }
+    .auth-tab[aria-selected="true"] {
+      color: var(--blue-dark);
+      background: #fff;
+      box-shadow: 0 3px 10px rgba(11, 27, 51, .08);
+    }
+    .auth-tab:hover { color: var(--blue-dark); }
+    .auth-panel { padding-top: 20px; }
+    .auth-panel h2 {
+      color: var(--ink);
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.35;
+      letter-spacing: -.025em;
+    }
+    html[lang="en"] .auth-panel h2 { font-family: var(--font-ui); letter-spacing: -.04em; }
+    .auth-sub { margin-top: 4px; color: var(--muted); font-size: 10.5px; line-height: 1.65; }
+    .auth-form { margin-top: 17px; }
+    .field-group + .field-group { margin-top: 12px; }
+    .field-label {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 5px;
+      color: #2D405A;
+      font-size: 11.5px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+    .req { color: var(--red); }
+    .input {
+      width: 100%;
+      min-height: 47px;
+      padding: 11px 13px;
+      color: var(--ink);
+      border: 1px solid var(--line-strong);
+      border-radius: 9px;
+      background: #FBFDFF;
+      font-size: 13px;
+      line-height: 1.5;
+      outline: none;
+      transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+    .input::placeholder { color: #64748B; opacity: 1; }
+    .input:focus { border-color: var(--blue); background: #fff; box-shadow: 0 0 0 3px rgba(24, 119, 242, .1); }
+    .input[aria-invalid="true"] { border-color: #E58B84; background: #FFF9F8; }
+    .password-wrap { position: relative; }
+    .password-wrap .input { padding-right: 48px; }
+    .password-toggle {
+      position: absolute;
+      top: 2px; right: 2px;
+      display: grid;
+      place-items: center;
+      width: 43px; height: 43px;
+      padding: 0;
+      border-radius: 7px;
+      color: #6C7D93;
+      transition: color .18s ease, background .18s ease;
+    }
+    .password-toggle:hover { color: var(--ink); background: #F2F7FD; }
+    .password-toggle svg { width: 16px; height: 16px; }
+    .password-toggle .eye-closed, .password-toggle[aria-pressed="true"] .eye-open { display: none; }
+    .password-toggle[aria-pressed="true"] .eye-closed { display: block; }
+    .field-hint { margin-top: 4px; color: #64748B; font-size: 9.5px; line-height: 1.55; }
+    .form-error {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-top: 11px;
+      padding: 9px 10px;
+      border: 1px solid #F1C8C4;
+      border-radius: 8px;
+      color: var(--red);
+      background: var(--red-soft);
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 1.55;
+    }
+    .form-error::before {
+      content: "!";
+      display: grid;
+      place-items: center;
+      width: 14px; height: 14px;
+      flex: 0 0 auto;
+      margin-top: 1px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--red);
+      font-family: var(--font-ui);
+      font-size: 8px;
+      font-weight: 700;
+    }
+    .auth-submit { width: 100%; min-height: 49px; margin-top: 16px; font-size: 12.5px; }
+    .form-note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      margin-top: 10px;
+      color: #64748B;
+      font-size: 9px;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .form-note svg { width: 12px; height: 12px; flex: 0 0 auto; color: #0E8B4B; }
+    .forgot-line {
+      margin-top: 12px;
+      color: #64748B;
+      font-size: 9.5px;
+      line-height: 1.6;
+      text-align: center;
+    }
+    .forgot-line a { color: var(--blue-dark); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+    .auth-privacy {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-top: 17px;
+      padding-top: 13px;
+      border-top: 1px solid #EDF2F8;
+      color: #64748B;
+      font-size: 8.8px;
+      line-height: 1.6;
+    }
+    .auth-privacy svg { width: 13px; height: 13px; flex: 0 0 auto; margin-top: 1px; }
+    .auth-switch { margin-top: 14px; color: var(--muted); font-size: 9.5px; text-align: center; }
+    .auth-switch button {
+      padding: 0;
+      color: var(--blue-dark);
+      font-size: inherit;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* Dashboard */
+    .dashboard { padding: 31px 0 58px; }
+    .dashboard-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 21px;
+    }
+    .dashboard-head h1 {
+      margin-top: 3px;
+      color: var(--ink);
+      font-size: clamp(1.9rem, 5vw, 2.65rem);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -.03em;
+    }
+    html[lang="en"] .dashboard-head h1 { font-family: var(--font-ui); letter-spacing: -.045em; }
+    #authTitle:focus, .dashboard-head h1:focus { outline: none; }
+    .welcome-line { margin-top: 5px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+    .welcome-name { color: var(--ink-soft); font-weight: 600; }
+    .dashboard-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .last-synced { color: var(--muted); font-size: 9px; line-height: 1.5; }
+    .refresh-btn.loading .refresh-icon { animation: spin .7s linear infinite; }
+    .customer-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+    .stat-card {
+      padding: 12px 11px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .9);
+      box-shadow: var(--shadow-sm);
+    }
+    .stat-label { display: block; color: var(--muted); font-size: 8.5px; font-weight: 500; line-height: 1.45; }
+    .stat-value {
+      display: block;
+      margin-top: 4px;
+      color: var(--ink);
+      font-family: var(--font-ui);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -.04em;
+    }
+    .stat-card.active-stat .stat-value { color: var(--blue-dark); }
+    .stat-card.delivered-stat .stat-value { color: var(--green); }
+    .orders-panel {
+      border: 1px solid var(--line);
+      border-radius: 17px;
+      background: rgba(255, 255, 255, .72);
+      box-shadow: 0 8px 26px rgba(11, 27, 51, .035);
+      overflow: hidden;
+    }
+    .orders-panel-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 7px;
+      padding: 14px 15px 12px;
+      border-bottom: 1px solid #EAF1F8;
+    }
+    .orders-panel-head h2 { color: var(--ink); font-size: 14px; font-weight: 600; line-height: 1.45; }
+    html[lang="en"] .orders-panel-head h2 { font-family: var(--font-ui); letter-spacing: -.02em; }
+    .auto-refresh {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--muted);
+      font-size: 8.5px;
+      line-height: 1.4;
+    }
+    .auto-refresh::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: #18A665; }
+    .orders-list { display: grid; gap: 10px; padding: 11px; }
+    .loading-state {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 180px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+    .loading-state .spinner { width: 18px; height: 18px; border-width: 2px; }
+    .empty-state {
+      display: grid;
+      justify-items: center;
+      padding: 42px 18px 48px;
+      text-align: center;
+    }
+    .empty-icon {
+      display: grid;
+      place-items: center;
+      width: 54px; height: 54px;
+      margin-bottom: 10px;
+      border: 1px solid #DBE8F8;
+      border-radius: 16px;
+      color: var(--blue);
+      background: #F2F8FF;
+    }
+    .empty-icon svg { width: 24px; height: 24px; }
+    .empty-state h2 { color: var(--ink); font-size: 15px; font-weight: 600; line-height: 1.45; }
+    .empty-state p { max-width: 330px; margin-top: 4px; color: var(--muted); font-size: 10.5px; line-height: 1.7; }
+    .empty-state .btn { margin-top: 15px; }
+
+    /* Order cards */
+    .customer-order {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 3px 12px rgba(11, 27, 51, .025);
+    }
+    .order-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 7px;
+      padding: 12px 13px 10px;
+      border-bottom: 1px solid #EFF4FA;
+      background: #FCFDFF;
+    }
+    .order-ident { min-width: 0; }
+    .order-id {
+      display: block;
+      color: var(--ink-soft);
+      font-family: var(--font-ui);
+      font-size: 10px;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: .01em;
+      overflow-wrap: anywhere;
+    }
+    .order-date { display: block; margin-top: 1px; color: var(--muted); font-size: 9.5px; line-height: 1.4; }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      flex: 0 0 auto;
+      padding: 4px 9px;
+      border-radius: 999px;
+      font-size: 8.5px;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .status-pill.new { color: #0B4EA2; background: var(--blue-soft); }
+    .status-pill.processing { color: #744300; background: var(--amber-soft); }
+    .status-pill.delivered { color: #07623B; background: var(--green-soft); }
+    .status-pill.cancelled { color: #991B13; background: var(--red-soft); }
+    .order-body { padding: 13px 13px 12px; }
+    .order-package-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+    .order-package-label { display: block; color: var(--muted); font-size: 9px; font-weight: 500; line-height: 1.4; letter-spacing: .06em; text-transform: uppercase; }
+    .order-package {
+      display: block;
+      margin-top: 1px;
+      color: var(--ink);
+      font-family: var(--font-bn);
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.4;
+      overflow-wrap: anywhere;
+    }
+    .order-price {
+      flex: 0 0 auto;
+      color: #5028B5;
+      font-family: var(--font-ui);
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -.04em;
+    }
+    .progress-block { margin-top: 16px; padding: 12px 10px 9px; border: 1px solid #E8F0F9; border-radius: 11px; background: #FBFDFF; }
+    .progress-label { color: var(--muted); font-size: 9px; font-weight: 600; line-height: 1.4; letter-spacing: .06em; text-transform: uppercase; }
+    .tracker {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 10px;
+    }
+    .tracker-line {
+      position: absolute;
+      top: 13px;
+      right: 16.66%;
+      left: 16.66%;
+      height: 2px;
+      border-radius: 99px;
+      background: #E1EAF4;
+      overflow: hidden;
+    }
+    .tracker-line-fill {
+      display: block;
+      height: 100%;
+      width: 0;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--blue), var(--purple));
+      transition: width .5s var(--ease);
+    }
+    .tracker-step { position: relative; z-index: 1; display: grid; justify-items: center; gap: 5px; min-width: 0; }
+    .tracker-dot {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 27px; height: 27px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      color: #5D6F87;
+      background: #EDF3FA;
+      box-shadow: 0 0 0 1px #DFE8F2;
+      font-family: var(--font-ui);
+      font-size: 8px;
+      font-weight: 600;
+      transition: background .25s ease, color .25s ease, box-shadow .25s ease;
+    }
+    .tracker-step.done .tracker-dot { color: #fff; background: var(--green); box-shadow: 0 0 0 1px var(--green); }
+    .tracker-step.active .tracker-dot { color: var(--blue-dark); background: #EAF3FF; box-shadow: 0 0 0 1px #8BBDF8, 0 0 0 5px rgba(24, 119, 242, .07); }
+    .tracker-step.active .tracker-dot::after {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      border: 2px solid rgba(24, 119, 242, .3);
+      border-radius: 50%;
+      animation: stepPulse 2s ease-out infinite;
+      pointer-events: none;
+    }
+    @keyframes stepPulse {
+      0% { transform: scale(.9); opacity: .6; }
+      75%, 100% { transform: scale(1.38); opacity: 0; }
+    }
+    .tracker-dot svg { width: 12px; height: 12px; }
+    .tracker-step strong {
+      color: #5D6F87;
+      font-size: 9.5px;
+      font-weight: 500;
+      line-height: 1.45;
+      text-align: center;
+    }
+    .tracker-step.done strong, .tracker-step.active strong { color: var(--ink-soft); font-weight: 600; }
+    .tracker-time { color: #5D6F87; font-size: 8.5px; line-height: 1.4; text-align: center; }
+    .payment-verify-note {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 11px;
+      padding: 9px;
+      border: 1px dashed #E5CE95;
+      border-radius: 8px;
+      background: #FFFCF3;
+    }
+    .payment-verify-icon {
+      display: grid;
+      place-items: center;
+      width: 24px; height: 24px;
+      flex: 0 0 auto;
+      border-radius: 7px;
+      color: #825300;
+      background: #FFF2D2;
+    }
+    .payment-verify-icon svg { width: 13px; height: 13px; }
+    .payment-verify-copy { min-width: 0; flex: 1 1 170px; }
+    .payment-verify-copy strong { display: block; color: #5D4607; font-size: 9.5px; font-weight: 600; line-height: 1.5; }
+    .payment-verify-copy span { display: block; margin-top: 1px; color: #74633D; font-size: 9px; line-height: 1.55; }
+    .payment-proof-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      min-height: 30px;
+      margin-top: 2px;
+      padding: 4px 8px;
+      border: 1px solid #CDE8D8;
+      border-radius: 7px;
+      color: #0A6C3F;
+      background: #F2FBF6;
+      font-size: 8.5px;
+      font-weight: 600;
+      line-height: 1.4;
+      white-space: nowrap;
+    }
+    .payment-proof-link:hover { border-color: #9ED7B5; background: #ECFAF2; }
+    .payment-proof-link svg { width: 11px; height: 11px; }
+    .cancelled-banner {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      margin-top: 13px;
+      padding: 10px 11px;
+      border: 1px solid #F0CBC7;
+      border-radius: 9px;
+      color: var(--red);
+      background: var(--red-soft);
+    }
+    .cancelled-banner svg { width: 15px; height: 15px; flex: 0 0 auto; margin-top: 1px; }
+    .cancelled-banner strong { display: block; font-size: 10px; font-weight: 600; line-height: 1.45; }
+    .cancelled-banner span { display: block; margin-top: 1px; color: #8D3B34; font-size: 9px; line-height: 1.55; }
+    .order-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid #EFF4FA;
+    }
+    .order-payment { color: var(--muted); font-size: 10px; line-height: 1.5; }
+    .order-payment strong { color: var(--ink-soft); font-weight: 600; }
+    .order-payment .trx { font-family: var(--font-ui); letter-spacing: .015em; }
+    .support-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--blue-dark);
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    .support-link:hover { text-decoration: underline; text-underline-offset: 2px; }
+    .support-link svg { width: 11px; height: 11px; }
+    .dashboard-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 17px;
+      color: var(--muted);
+      font-size: 9px;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    .account-footer {
+      border-top: 1px solid rgba(224, 233, 245, .9);
+      padding: 23px 0 28px;
+      background: #fff;
+    }
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      color: #5D6F87;
+      font-size: 9.5px;
+      line-height: 1.6;
+    }
+    .footer-inner a {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--blue-dark);
+      font-weight: 500;
+    }
+    .footer-inner a svg { width: 12px; height: 12px; }
+
+    /* Toast */
+    .toast {
+      position: fixed;
+      z-index: 100;
+      right: 16px;
+      bottom: calc(16px + env(safe-area-inset-bottom));
+      left: 16px;
+      width: fit-content;
+      max-width: calc(100% - 32px);
+      margin-inline: auto;
+      padding: 10px 14px;
+      border: 1px solid #D5EDE0;
+      border-radius: 10px;
+      color: #0B613B;
+      background: #F2FCF7;
+      box-shadow: 0 12px 30px rgba(11, 27, 51, .15);
+      font-size: 10.5px;
+      font-weight: 500;
+      line-height: 1.5;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .2s ease, transform .25s var(--ease);
+      pointer-events: none;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+    .toast.error { color: #941D14; border-color: #F2CBC7; background: #FFF4F3; }
+
+    @media (min-width: 560px) {
+      .container { width: min(100% - 44px, 1120px); }
+      .auth-card { padding: 28px 25px 24px; }
+      .auth-panel h2 { font-size: 23px; }
+      .auth-tab { min-height: 44px; font-size: 11.5px; }
+      .input { min-height: 49px; font-size: 13.5px; }
+      .user-chip { display: inline-flex; }
+      .auth-view { padding: 54px 0 65px; }
+      .dashboard { padding-top: 40px; }
+      .customer-stats { gap: 10px; }
+      .stat-card { padding: 14px 15px; }
+      .stat-value { font-size: 25px; }
+      .orders-list { padding: 13px; }
+      .order-head { padding: 14px 16px 11px; }
+      .order-body { padding: 15px 16px 14px; }
+      .order-package { font-size: 16px; }
+      .order-price { font-size: 21px; }
+      .tracker-step strong { font-size: 10px; }
+      .tracker-time { font-size: 9px; }
+    }
+    @media (min-width: 900px) {
+      :root { --header-h: 74px; }
+      .auth-layout {
+        grid-template-columns: minmax(0, 1fr) minmax(380px, 440px);
+        gap: 60px;
+        align-items: center;
+      }
+      .auth-view { padding: 64px 0 78px; }
+      .auth-card { margin: 0 0 0 auto; padding: 31px 29px 26px; }
+      .auth-intro h1 { max-width: 610px; }
+      .preview-card { max-width: 530px; }
+      .benefits { grid-template-columns: 1fr 1fr; gap: 12px 20px; }
+      .benefit:first-child { grid-column: 1 / -1; }
+      .dashboard { padding-top: 46px; }
+      .dashboard-head { margin-bottom: 26px; }
+      .customer-stats { gap: 12px; margin-bottom: 23px; }
+      .stat-card { padding: 16px 18px; border-radius: 14px; }
+      .stat-label { font-size: 9.5px; }
+      .stat-value { font-size: 28px; }
+      .orders-list { gap: 12px; padding: 14px; }
+      .order-head { padding: 15px 18px 12px; }
+      .order-body { padding: 16px 18px 15px; }
+      .order-package { font-size: 17px; }
+      .order-price { font-size: 22px; }
+      .order-meta { margin-top: 14px; padding-top: 12px; }
+      .progress-block { margin-top: 18px; padding: 14px 14px 11px; }
+      .tracker { margin-top: 12px; }
+      .tracker-dot { width: 30px; height: 30px; }
+      .tracker-line { top: 14.5px; }
+      .tracker-step strong { font-size: 10.5px; }
+      .tracker-time { font-size: 9px; }
+    }
+    @media (min-width: 1100px) {
+      .auth-layout { gap: 90px; }
+      .auth-card { padding: 34px 32px 28px; }
+      .benefits { gap: 15px 25px; }
+      .orders-list { padding: 16px; }
+      .order-head { padding: 16px 20px 13px; }
+      .order-body { padding: 18px 20px 16px; }
+      .tracker-step strong { font-size: 11px; }
+    }
+    @media (max-width: 399px) {
+      .container { width: calc(100% - 26px); }
+      .brand-mark { width: 34px; height: 34px; border-radius: 9px; }
+      .brand-mark svg { width: 18px; height: 18px; }
+      .brand-name { font-size: 16.5px; }
+      .topbar-actions { gap: 5px; }
+      .lang-toggle { min-height: 38px; }
+      .lang-opt { height: 32px; min-width: 28px; padding: 0 5px; font-size: 9px; }
+      .logout-btn { width: 44px; height: 44px; padding: 0; }
+      .logout-label { display: none; }
+      .auth-card { padding: 20px 15px 18px; }
+      .auth-panel h2 { font-size: 19px; }
+      .auth-tab { font-size: 10px; }
+      .benefits { display: none; }
+      .customer-stats { gap: 6px; }
+      .stat-card { padding: 10px 8px; }
+      .stat-value { font-size: 20px; }
+      .stat-label { font-size: 7.8px; }
+      .orders-panel-head { padding: 12px 12px 10px; }
+      .orders-list { padding: 8px; gap: 8px; }
+      .order-head { padding: 11px 11px 9px; }
+      .order-body { padding: 12px 11px 11px; }
+      .order-package { font-size: 14px; }
+      .order-price { font-size: 17px; }
+      .tracker-step strong { font-size: 8.5px; }
+      .tracker-time { font-size: 7.8px; }
+      .tracker-dot { width: 25px; height: 25px; }
+      .tracker-line { top: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+        scroll-behavior: auto !important;
+      }
+      .tracker-step.active .tracker-dot::after { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#mainContent" data-i18n="app.skip">মূল কনটেন্টে যান</a>
+
+  <header class="site-header">
+    <div class="container topbar-inner">
+      <a class="brand" href="/" aria-label="Thunder Maxit" data-i18n-aria-label="app.brandHome">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M13.8 2 5 13.2h5.7L9.2 22 19 10.1h-5.9L13.8 2Z" fill="currentColor"/></svg>
+        </span>
+        <span class="brand-name">Thunder <span>Maxit</span></span>
+      </a>
+      <div class="topbar-actions">
+        <span class="user-chip" id="userChip" hidden>
+          <span class="user-avatar" id="userAvatar" aria-hidden="true">TM</span>
+          <span class="user-name" id="userName"></span>
+        </span>
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">
+          <span class="lang-opt lang-bn" aria-hidden="true">বাং</span>
+          <span class="lang-opt lang-en" aria-hidden="true">EN</span>
+        </button>
+        <button class="logout-btn" id="logoutButton" type="button" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+          <span class="logout-label" data-i18n="app.logout">লগ আউট</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="boot-screen" id="bootScreen" role="status" aria-live="polite">
+    <div class="boot-inner">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M13.8 2 5 13.2h5.7L9.2 22 19 10.1h-5.9L13.8 2Z" fill="currentColor"/></svg>
+      </span>
+      <span class="boot-spinner" aria-hidden="true"></span>
+      <span class="boot-text" data-i18n="app.loading">একটু অপেক্ষা করুন…</span>
+    </div>
+  </div>
+
+  <main id="mainContent">
+    <!-- Sign in / Sign up -->
+    <section class="auth-view" id="authView" aria-labelledby="authTitle" hidden>
+      <div class="container auth-layout">
+        <div class="auth-intro">
+          <span class="eyebrow" data-i18n="auth.eyebrow">কাস্টমার অ্যাকাউন্ট</span>
+          <h1 id="authTitle" tabindex="-1" data-i18n="auth.title">আপনার অর্ডারের অগ্রগতি, এক জায়গায়।</h1>
+          <p class="auth-lead" data-i18n="auth.subtitle">লগ ইন করুন বা ফ্রি অ্যাকাউন্ট খুলুন—আপনার অর্ডার কোথায় আছে, তা লাইভ দেখুন।</p>
+
+          <div class="preview-card" aria-hidden="true">
+            <div class="preview-head">
+              <span class="preview-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8Z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg>
+              </span>
+              <div class="preview-title">
+                <span data-i18n="auth.previewLabel">অর্ডার স্ট্যাটাস</span>
+                <strong data-i18n="auth.previewPackage">১০K ফলোয়ার</strong>
+              </div>
+              <span class="preview-status" data-i18n="auth.previewStatus">প্রসেসিং</span>
+            </div>
+            <div class="mini-tracker">
+              <span class="mini-line"><span></span></span>
+              <div class="mini-step done"><span class="mini-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4L19 6"/></svg></span><span data-i18n="auth.previewStep1">অর্ডার গৃহীত</span></div>
+              <div class="mini-step active"><span class="mini-dot">02</span><span data-i18n="auth.previewStep2">প্রসেসিং</span></div>
+              <div class="mini-step"><span class="mini-dot">03</span><span data-i18n="auth.previewStep3">ডেলিভারড</span></div>
+            </div>
+            <div class="preview-foot">
+              <span data-i18n="auth.previewOrderId">#TM-20261019-A1B2</span>
+              <span>৳880</span>
+            </div>
+          </div>
+
+          <ul class="benefits">
+            <li class="benefit">
+              <span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <span><strong data-i18n="auth.benefit1Title">লাইভ অর্ডার প্রগ্রেস</strong><span data-i18n="auth.benefit1Text">অর্ডার কোথায় আছে, তা সাথে সাথে দেখুন।</span></span>
+            </li>
+            <li class="benefit">
+              <span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8Z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg></span>
+              <span><strong data-i18n="auth.benefit2Title">সব অর্ডার এক জায়গায়</strong><span data-i18n="auth.benefit2Text">পুরোনো ও নতুন অর্ডারের হিস্ট্রি সহজে দেখুন।</span></span>
+            </li>
+            <li class="benefit">
+              <span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8Z"/><path d="M8 9h8M8 13h5"/></svg></span>
+              <span><strong data-i18n="auth.benefit3Title">দ্রুত সাপোর্ট</strong><span data-i18n="auth.benefit3Text">সাহায্য দরকার হলে আমরা আছি আপনার পাশে।</span></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="auth-card">
+          <div class="auth-tabs" role="tablist" aria-label="Account access" data-i18n-aria-label="auth.tabsLabel">
+            <button class="auth-tab" id="tabLogin" type="button" role="tab" aria-selected="true" aria-controls="loginPanel" data-mode="login">
+              <span data-i18n="auth.loginTab">লগ ইন</span>
+            </button>
+            <button class="auth-tab" id="tabSignup" type="button" role="tab" aria-selected="false" aria-controls="signupPanel" data-mode="signup" tabindex="-1">
+              <span data-i18n="auth.signupTab">সাইন আপ</span>
+            </button>
+          </div>
+
+          <div class="auth-panel" id="loginPanel" role="tabpanel" aria-labelledby="tabLogin">
+            <h2 data-i18n="auth.loginTitle">আবার স্বাগতম</h2>
+            <p class="auth-sub" data-i18n="auth.loginSubtitle">অর্ডার ট্র্যাক করতে আপনার অ্যাকাউন্টে লগ ইন করুন।</p>
+            <form class="auth-form" id="loginForm" novalidate>
+              <div class="field-group">
+                <label class="field-label" for="loginPhone"><span data-i18n="auth.phone">মোবাইল নম্বর</span> <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" type="tel" id="loginPhone" name="phone" inputmode="numeric" autocomplete="tel" maxlength="16" placeholder="01XXXXXXXXX" data-i18n-placeholder="auth.phonePh" required aria-describedby="loginError">
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="loginPassword"><span data-i18n="auth.password">পাসওয়ার্ড</span> <span class="req" aria-hidden="true">*</span></label>
+                <div class="password-wrap">
+                  <input class="input" type="password" id="loginPassword" name="password" autocomplete="current-password" placeholder="আপনার পাসওয়ার্ড" data-i18n-placeholder="auth.passwordPh" required aria-describedby="loginError">
+                  <button class="password-toggle" type="button" data-password-target="loginPassword" aria-label="Show password" aria-pressed="false">
+                    <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    <svg class="eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 3 18 18M10.6 10.7a2 2 0 0 0 2.7 2.7M9.9 5.2A10.5 10.5 0 0 1 12 5c6.5 0 10 7 10 7a18.4 18.4 0 0 1-3 4.1M6.6 6.6C3.6 8.6 2 12 2 12s3.5 7 10 7a10.5 10.5 0 0 0 5.4-1.4"/></svg>
+                  </button>
+                </div>
+              </div>
+              <p class="form-error" id="loginError" role="alert" hidden></p>
+              <button class="btn btn-primary auth-submit" id="loginButton" type="submit">
+                <span class="spinner" aria-hidden="true"></span>
+                <span data-i18n="auth.loginButton">লগ ইন করুন</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+              <p class="forgot-line"><span data-i18n="auth.forgot">পাসওয়ার্ড ভুলে গেছেন?</span> <a href="/#contact" data-i18n="auth.contactSupport">সাপোর্টে যোগাযোগ করুন</a></p>
+              <p class="auth-switch"><span data-i18n="auth.loginSwitch">নতুন ব্যবহারকারী?</span> <button type="button" data-switch-mode="signup" data-i18n="auth.signupTab">সাইন আপ</button></p>
+            </form>
+          </div>
+
+          <div class="auth-panel" id="signupPanel" role="tabpanel" aria-labelledby="tabSignup" hidden>
+            <h2 data-i18n="auth.signupTitle">অ্যাকাউন্ট তৈরি করুন</h2>
+            <p class="auth-sub" data-i18n="auth.signupSubtitle">মাত্র এক মিনিটে অ্যাকাউন্ট খুলে অর্ডার ট্র্যাকিং শুরু করুন।</p>
+            <form class="auth-form" id="signupForm" novalidate>
+              <div class="field-group">
+                <label class="field-label" for="signupName"><span data-i18n="auth.name">পূর্ণ নাম</span> <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" type="text" id="signupName" name="name" autocomplete="name" maxlength="60" placeholder="আপনার পূর্ণ নাম" data-i18n-placeholder="auth.namePh" required aria-describedby="signupError">
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="signupPhone"><span data-i18n="auth.phone">মোবাইল নম্বর</span> <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" type="tel" id="signupPhone" name="phone" inputmode="numeric" autocomplete="tel" maxlength="16" placeholder="01XXXXXXXXX" data-i18n-placeholder="auth.phonePh" required aria-describedby="signupError">
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="signupPassword"><span data-i18n="auth.password">পাসওয়ার্ড</span> <span class="req" aria-hidden="true">*</span></label>
+                <div class="password-wrap">
+                  <input class="input" type="password" id="signupPassword" name="password" autocomplete="new-password" placeholder="আপনার পাসওয়ার্ড" data-i18n-placeholder="auth.passwordPh" required aria-describedby="signupError signupPasswordHint">
+                  <button class="password-toggle" type="button" data-password-target="signupPassword" aria-label="Show password" aria-pressed="false">
+                    <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    <svg class="eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 3 18 18M10.6 10.7a2 2 0 0 0 2.7 2.7M9.9 5.2A10.5 10.5 0 0 1 12 5c6.5 0 10 7 10 7a18.4 18.4 0 0 1-3 4.1M6.6 6.6C3.6 8.6 2 12 2 12s3.5 7 10 7a10.5 10.5 0 0 0 5.4-1.4"/></svg>
+                  </button>
+                </div>
+                <p class="field-hint" id="signupPasswordHint" data-i18n="auth.passwordHint">কমপক্ষে ৮ অক্ষরের পাসওয়ার্ড দিন।</p>
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="signupConfirm"><span data-i18n="auth.confirm">পাসওয়ার্ড নিশ্চিত করুন</span> <span class="req" aria-hidden="true">*</span></label>
+                <div class="password-wrap">
+                  <input class="input" type="password" id="signupConfirm" name="confirmPassword" autocomplete="new-password" placeholder="পাসওয়ার্ড আবার লিখুন" data-i18n-placeholder="auth.confirmPh" required aria-describedby="signupError">
+                  <button class="password-toggle" type="button" data-password-target="signupConfirm" aria-label="Show password" aria-pressed="false">
+                    <svg class="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    <svg class="eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 3 18 18M10.6 10.7a2 2 0 0 0 2.7 2.7M9.9 5.2A10.5 10.5 0 0 1 12 5c6.5 0 10 7 10 7a18.4 18.4 0 0 1-3 4.1M6.6 6.6C3.6 8.6 2 12 2 12s3.5 7 10 7a10.5 10.5 0 0 0 5.4-1.4"/></svg>
+                  </button>
+                </div>
+              </div>
+              <p class="form-error" id="signupError" role="alert" hidden></p>
+              <button class="btn btn-primary auth-submit" id="signupButton" type="submit">
+                <span class="spinner" aria-hidden="true"></span>
+                <span data-i18n="auth.signupButton">অ্যাকাউন্ট তৈরি করুন</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+              <p class="form-note">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+                <span data-i18n="auth.secureNote">আপনার অ্যাকাউন্ট নিরাপদে সংরক্ষিত থাকে।</span>
+              </p>
+              <p class="auth-switch"><span data-i18n="auth.signupSwitch">ইতিমধ্যে অ্যাকাউন্ট আছে?</span> <button type="button" data-switch-mode="login" data-i18n="auth.loginTab">লগ ইন</button></p>
+            </form>
+          </div>
+          <div class="auth-privacy">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+            <span data-i18n="auth.privacy">আপনার তথ্য শুধু অ্যাকাউন্ট ও অর্ডার ট্র্যাকিংয়ের জন্য ব্যবহার করা হয়।</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer orders -->
+    <section class="dashboard" id="dashboardView" aria-labelledby="dashboardTitle" hidden>
+      <div class="container">
+        <div class="dashboard-head">
+          <div>
+            <span class="eyebrow" data-i18n="dashboard.eyebrow">আমার অ্যাকাউন্ট</span>
+            <h1 id="dashboardTitle" tabindex="-1" data-i18n="dashboard.title">আমার অর্ডার</h1>
+            <p class="welcome-line" id="welcomeLine"></p>
+          </div>
+          <div class="dashboard-actions">
+            <span class="last-synced" id="lastSynced"></span>
+            <button class="btn btn-secondary refresh-btn" id="refreshButton" type="button">
+              <svg class="btn-icon refresh-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8.1 8.1 0 0 0-15.5-2M4 4v5h5M4 13a8.1 8.1 0 0 0 15.5 2M20 20v-5h-5"/></svg>
+              <span data-i18n="dashboard.refresh">রিফ্রেশ</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="customer-stats" role="group" aria-label="Order summary" data-i18n-aria-label="dashboard.summaryLabel">
+          <article class="stat-card">
+            <span class="stat-label" data-i18n="dashboard.total">মোট অর্ডার</span>
+            <span class="stat-value" id="statTotal">0</span>
+          </article>
+          <article class="stat-card active-stat">
+            <span class="stat-label" data-i18n="dashboard.active">চলমান</span>
+            <span class="stat-value" id="statActive">0</span>
+          </article>
+          <article class="stat-card delivered-stat">
+            <span class="stat-label" data-i18n="dashboard.delivered">ডেলিভারড</span>
+            <span class="stat-value" id="statDelivered">0</span>
+          </article>
+        </div>
+
+        <div class="orders-panel">
+          <div class="orders-panel-head">
+            <h2 data-i18n="dashboard.ordersHeading">অর্ডার হিস্ট্রি</h2>
+            <span class="auto-refresh" data-i18n="dashboard.autoRefresh">প্রতি ৩০ সেকেন্ডে আপডেট হয়</span>
+          </div>
+          <div class="loading-state" id="ordersLoading">
+            <span class="spinner" aria-hidden="true"></span>
+            <span data-i18n="dashboard.loading">অর্ডার লোড হচ্ছে…</span>
+          </div>
+          <div class="orders-list" id="ordersList"></div>
+          <div class="empty-state" id="emptyState" hidden>
+            <span class="empty-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8Z"/><path d="m3.3 7 8.7 5 8.7-5M12 22V12"/></svg>
+            </span>
+            <h2 data-i18n="dashboard.emptyTitle">এখনো কোনো অর্ডার নেই</h2>
+            <p data-i18n="dashboard.emptyText">আপনার প্রথম অর্ডার দিন—এর লাইভ অগ্রগতি এখানে দেখতে পাবেন।</p>
+            <a class="btn btn-primary" href="/#pricing" data-i18n="dashboard.browse">প্যাকেজ দেখুন</a>
+          </div>
+        </div>
+
+        <div class="dashboard-footer">
+          <span data-i18n="dashboard.helpPrefix">অর্ডার নিয়ে প্রশ্ন আছে?</span>
+          <a href="/#contact" data-i18n="dashboard.contact">আমাদের সাথে যোগাযোগ করুন</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="account-footer">
+    <div class="container footer-inner">
+      <span>© 2026 Thunder Maxit</span>
+      <a href="/" data-i18n="app.backToSite">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+        <span>ওয়েবসাইটে ফিরুন</span>
+      </a>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    'use strict';
+
+    const $ = (selector, context = document) => context.querySelector(selector);
+    const $$ = (selector, context = document) => Array.from(context.querySelectorAll(selector));
+
+    const I18N = {
+      bn: {
+        meta: { title: 'আমার অর্ডার — Thunder Maxit' },
+        app: {
+          skip: 'মূল কনটেন্টে যান',
+          brandHome: 'Thunder Maxit — মূল ওয়েবসাইট',
+          language: 'ভাষা পরিবর্তন করুন',
+          logout: 'লগ আউট',
+          loading: 'একটু অপেক্ষা করুন…',
+          backToSite: 'ওয়েবসাইটে ফিরুন'
+        },
+        auth: {
+          eyebrow: 'কাস্টমার অ্যাকাউন্ট',
+          title: 'আপনার অর্ডারের অগ্রগতি, এক জায়গায়।',
+          subtitle: 'লগ ইন করুন বা ফ্রি অ্যাকাউন্ট খুলুন—আপনার অর্ডার কোথায় আছে, তা লাইভ দেখুন।',
+          previewLabel: 'অর্ডার স্ট্যাটাস',
+          previewPackage: '১০K ফলোয়ার',
+          previewStatus: 'প্রসেসিং',
+          previewStep1: 'অর্ডার গৃহীত',
+          previewStep2: 'প্রসেসিং',
+          previewStep3: 'ডেলিভারড',
+          previewOrderId: '#TM-20261019-A1B2',
+          benefit1Title: 'লাইভ অর্ডার প্রগ্রেস',
+          benefit1Text: 'অর্ডার কোথায় আছে, তা সাথে সাথে দেখুন।',
+          benefit2Title: 'সব অর্ডার এক জায়গায়',
+          benefit2Text: 'পুরোনো ও নতুন অর্ডারের হিস্ট্রি সহজে দেখুন।',
+          benefit3Title: 'দ্রুত সাপোর্ট',
+          benefit3Text: 'সাহায্য দরকার হলে আমরা আছি আপনার পাশে।',
+          tabsLabel: 'অ্যাকাউন্ট প্রবেশ',
+          loginTab: 'লগ ইন',
+          signupTab: 'সাইন আপ',
+          loginTitle: 'আবার স্বাগতম',
+          loginSubtitle: 'অর্ডার ট্র্যাক করতে আপনার অ্যাকাউন্টে লগ ইন করুন।',
+          signupTitle: 'অ্যাকাউন্ট তৈরি করুন',
+          signupSubtitle: 'মাত্র এক মিনিটে অ্যাকাউন্ট খুলে অর্ডার ট্র্যাকিং শুরু করুন।',
+          name: 'পূর্ণ নাম',
+          namePh: 'আপনার পূর্ণ নাম',
+          phone: 'মোবাইল নম্বর',
+          phonePh: '01XXXXXXXXX',
+          password: 'পাসওয়ার্ড',
+          passwordPh: 'আপনার পাসওয়ার্ড',
+          confirm: 'পাসওয়ার্ড নিশ্চিত করুন',
+          confirmPh: 'পাসওয়ার্ড আবার লিখুন',
+          passwordHint: 'কমপক্ষে ৮ অক্ষরের পাসওয়ার্ড দিন।',
+          loginButton: 'লগ ইন করুন',
+          signupButton: 'অ্যাকাউন্ট তৈরি করুন',
+          showPassword: 'পাসওয়ার্ড দেখুন',
+          hidePassword: 'পাসওয়ার্ড লুকান',
+          secureNote: 'আপনার অ্যাকাউন্ট নিরাপদে সংরক্ষিত থাকে।',
+          privacy: 'আপনার তথ্য শুধু অ্যাকাউন্ট ও অর্ডার ট্র্যাকিংয়ের জন্য ব্যবহার করা হয়।',
+          forgot: 'পাসওয়ার্ড ভুলে গেছেন?',
+          contactSupport: 'সাপোর্টে যোগাযোগ করুন',
+          loginSwitch: 'নতুন ব্যবহারকারী?',
+          signupSwitch: 'ইতিমধ্যে অ্যাকাউন্ট আছে?',
+          errorName: 'অনুগ্রহ করে আপনার নাম লিখুন।',
+          errorPhone: 'সঠিক ১১ ডিজিটের মোবাইল নম্বর দিন (যেমন 01712345678)।',
+          errorPassword: 'পাসওয়ার্ড কমপক্ষে ৮ অক্ষরের হতে হবে।',
+          errorConfirm: 'দুইটি পাসওয়ার্ড মিলছে না।',
+          errorLoginMissing: 'মোবাইল নম্বর ও পাসওয়ার্ড দিন।',
+          errorCredentials: 'মোবাইল নম্বর বা পাসওয়ার্ড সঠিক নয়।',
+          errorPhoneExists: 'এই মোবাইল নম্বরে ইতিমধ্যে একটি অ্যাকাউন্ট আছে। লগ ইন করুন।',
+          errorRate: 'অনেকবার চেষ্টা করা হয়েছে। কিছুক্ষণ পর আবার চেষ্টা করুন।',
+          errorGeneric: 'কিছু একটা সমস্যা হয়েছে। আবার চেষ্টা করুন।',
+          errorNetwork: 'সার্ভারে সংযোগ করা যায়নি। আপনার ইন্টারনেট সংযোগ দেখে আবার চেষ্টা করুন।',
+          sessionExpired: 'আপনার সেশন শেষ হয়েছে। আবার লগ ইন করুন।',
+          successLogin: 'সফলভাবে লগ ইন হয়েছেন।',
+          successSignup: 'আপনার অ্যাকাউন্ট তৈরি হয়েছে।',
+          signedOut: 'আপনি লগ আউট করেছেন।'
+        },
+        dashboard: {
+          eyebrow: 'আমার অ্যাকাউন্ট',
+          title: 'আমার অর্ডার',
+          welcome: 'স্বাগতম, {name}',
+          subtitle: 'আপনার অর্ডারের সর্বশেষ অবস্থা এখানে দেখুন।',
+          refresh: 'রিফ্রেশ',
+          total: 'মোট অর্ডার',
+          active: 'চলমান',
+          delivered: 'ডেলিভারড',
+          summaryLabel: 'অর্ডার সারাংশ',
+          ordersHeading: 'অর্ডার হিস্ট্রি',
+          autoRefresh: 'প্রতি ৩০ সেকেন্ডে আপডেট হয়',
+          loading: 'অর্ডার লোড হচ্ছে…',
+          emptyTitle: 'এখনো কোনো অর্ডার নেই',
+          emptyText: 'আপনার প্রথম অর্ডার দিন—এর লাইভ অগ্রগতি এখানে দেখতে পাবেন।',
+          browse: 'প্যাকেজ দেখুন',
+          helpPrefix: 'অর্ডার নিয়ে প্রশ্ন আছে?',
+          contact: 'আমাদের সাথে যোগাযোগ করুন',
+          statusNew: 'অর্ডার গৃহীত',
+          statusProcessing: 'প্রসেসিং',
+          statusDelivered: 'ডেলিভারড',
+          statusCancelled: 'বাতিল',
+          stepReceived: 'অর্ডার গৃহীত',
+          stepProcessing: 'প্রসেসিং',
+          stepDelivered: 'ডেলিভারড',
+          cancelledTitle: 'এই অর্ডারটি বাতিল হয়েছে',
+          cancelledText: 'সাহায্য দরকার হলে আমাদের সাথে যোগাযোগ করুন।',
+          package: 'প্যাকেজ',
+          payment: 'পেমেন্ট',
+          transaction: 'Trx ID',
+          progress: 'অর্ডার প্রগ্রেস',
+          lastUpdated: 'সর্বশেষ আপডেট',
+          loadError: 'অর্ডার লোড করা যায়নি। আবার চেষ্টা করুন।',
+          support: 'সাপোর্ট',
+          paymentPendingTitle: 'পেমেন্ট যাচাইয়ের অপেক্ষায়',
+          paymentPendingText: 'পেমেন্টের স্ক্রিনশট WhatsApp-এ পাঠান। কাস্টমার সার্ভিস যাচাই করার পর অর্ডার প্রসেসিং শুরু হবে।',
+          sendScreenshot: 'স্ক্রিনশট পাঠান'
+        },
+        paymentNames: { bkash: 'bKash' },
+        statusLabels: { new: 'যাচাইয়ের অপেক্ষায়', processing: 'প্রসেসিং', delivered: 'ডেলিভারড', cancelled: 'বাতিল' }
+      },
+      en: {
+        meta: { title: 'My Orders — Thunder Maxit' },
+        app: {
+          skip: 'Skip to main content',
+          brandHome: 'Thunder Maxit — main website',
+          language: 'Switch language',
+          logout: 'Log out',
+          loading: 'Just a moment…',
+          backToSite: 'Back to website'
+        },
+        auth: {
+          eyebrow: 'Customer account',
+          title: 'Your order progress, all in one place.',
+          subtitle: 'Log in or create a free account to see exactly where your order is—live.',
+          previewLabel: 'Order status',
+          previewPackage: '10K Followers',
+          previewStatus: 'Processing',
+          previewStep1: 'Order received',
+          previewStep2: 'Processing',
+          previewStep3: 'Delivered',
+          previewOrderId: '#TM-20261019-A1B2',
+          benefit1Title: 'Live order progress',
+          benefit1Text: 'See exactly where your order is at every step.',
+          benefit2Title: 'All orders in one place',
+          benefit2Text: 'Keep your past and current orders easy to find.',
+          benefit3Title: 'Quick support',
+          benefit3Text: 'We are here whenever you need a hand.',
+          tabsLabel: 'Account access',
+          loginTab: 'Log in',
+          signupTab: 'Sign up',
+          loginTitle: 'Welcome back',
+          loginSubtitle: 'Log in to your account to track your orders.',
+          signupTitle: 'Create your account',
+          signupSubtitle: 'Create an account in under a minute and start tracking orders.',
+          name: 'Full name',
+          namePh: 'Your full name',
+          phone: 'Phone number',
+          phonePh: '01XXXXXXXXX',
+          password: 'Password',
+          passwordPh: 'Your password',
+          confirm: 'Confirm password',
+          confirmPh: 'Enter your password again',
+          passwordHint: 'Use at least 8 characters.',
+          loginButton: 'Log in',
+          signupButton: 'Create account',
+          showPassword: 'Show password',
+          hidePassword: 'Hide password',
+          secureNote: 'Your account is stored securely.',
+          privacy: 'Your information is used only for your account and order tracking.',
+          forgot: 'Forgot your password?',
+          contactSupport: 'Contact support',
+          loginSwitch: 'New here?',
+          signupSwitch: 'Already have an account?',
+          errorName: 'Please enter your name.',
+          errorPhone: 'Enter a valid 11-digit mobile number (e.g. 01712345678).',
+          errorPassword: 'Password must be at least 8 characters.',
+          errorConfirm: 'The passwords do not match.',
+          errorLoginMissing: 'Enter your phone number and password.',
+          errorCredentials: 'Phone number or password is incorrect.',
+          errorPhoneExists: 'An account already exists for this phone number. Log in instead.',
+          errorRate: 'Too many attempts. Please try again later.',
+          errorGeneric: 'Something went wrong. Please try again.',
+          errorNetwork: 'Could not connect to the server. Check your connection and try again.',
+          sessionExpired: 'Your session expired. Please log in again.',
+          successLogin: 'Logged in successfully.',
+          successSignup: 'Your account is ready.',
+          signedOut: 'You have been logged out.'
+        },
+        dashboard: {
+          eyebrow: 'My account',
+          title: 'My orders',
+          welcome: 'Welcome, {name}',
+          subtitle: 'See the latest progress on every order here.',
+          refresh: 'Refresh',
+          total: 'Total orders',
+          active: 'In progress',
+          delivered: 'Delivered',
+          summaryLabel: 'Order summary',
+          ordersHeading: 'Order history',
+          autoRefresh: 'Updates every 30 seconds',
+          loading: 'Loading orders…',
+          emptyTitle: 'No orders yet',
+          emptyText: 'Place your first order and follow its progress here.',
+          browse: 'Browse packages',
+          helpPrefix: 'Questions about an order?',
+          contact: 'Contact us',
+          statusNew: 'Order received',
+          statusProcessing: 'Processing',
+          statusDelivered: 'Delivered',
+          statusCancelled: 'Cancelled',
+          stepReceived: 'Order received',
+          stepProcessing: 'Processing',
+          stepDelivered: 'Delivered',
+          cancelledTitle: 'This order was cancelled',
+          cancelledText: 'Contact us if you need help with this order.',
+          package: 'Package',
+          payment: 'Payment',
+          transaction: 'Trx ID',
+          progress: 'Order progress',
+          lastUpdated: 'Last updated',
+          loadError: 'Could not load your orders. Please try again.',
+          support: 'Support',
+          paymentPendingTitle: 'Payment verification pending',
+          paymentPendingText: 'Send your payment screenshot on WhatsApp. Processing starts after customer service verifies it.',
+          sendScreenshot: 'Send screenshot'
+        },
+        paymentNames: { bkash: 'bKash' },
+        statusLabels: { new: 'Verification pending', processing: 'Processing', delivered: 'Delivered', cancelled: 'Cancelled' }
+      }
+    };
+
+    const BUSINESS_WHATSAPP = '8801581415069';
+
+    const state = {
+      lang: 'bn',
+      mode: 'login',
+      customer: null,
+      orders: [],
+      authenticated: false,
+      loading: false,
+      pollTimer: null,
+      toastTimer: null,
+      booted: false,
+      lastOrderSync: null
+    };
+
+    const elements = {
+      boot: $('#bootScreen'),
+      header: $('#userChip'),
+      userChip: $('#userChip'),
+      userAvatar: $('#userAvatar'),
+      userName: $('#userName'),
+      langToggle: $('#langToggle'),
+      logout: $('#logoutButton'),
+      authView: $('#authView'),
+      authTitle: $('#authTitle'),
+      dashboard: $('#dashboardView'),
+      dashboardTitle: $('#dashboardTitle'),
+      welcomeLine: $('#welcomeLine'),
+      authTabs: [$('#tabLogin'), $('#tabSignup')],
+      loginPanel: $('#loginPanel'),
+      signupPanel: $('#signupPanel'),
+      loginForm: $('#loginForm'),
+      signupForm: $('#signupForm'),
+      loginPhone: $('#loginPhone'),
+      loginPassword: $('#loginPassword'),
+      signupName: $('#signupName'),
+      signupPhone: $('#signupPhone'),
+      signupPassword: $('#signupPassword'),
+      signupConfirm: $('#signupConfirm'),
+      loginButton: $('#loginButton'),
+      signupButton: $('#signupButton'),
+      loginError: $('#loginError'),
+      signupError: $('#signupError'),
+      refreshButton: $('#refreshButton'),
+      ordersLoading: $('#ordersLoading'),
+      ordersList: $('#ordersList'),
+      emptyState: $('#emptyState'),
+      statTotal: $('#statTotal'),
+      statActive: $('#statActive'),
+      statDelivered: $('#statDelivered'),
+      lastSynced: $('#lastSynced'),
+      toast: $('#toast')
+    };
+
+    function getText(path) {
+      return path.split('.').reduce((acc, key) => (acc && acc[key] !== undefined ? acc[key] : undefined), I18N[state.lang]) || '';
+    }
+
+    function interpolate(template, values) {
+      return template.replace(/\{(\w+)\}/g, (_, key) => (values[key] !== undefined ? values[key] : ''));
+    }
+
+    function saveLanguage(lang) {
+      try { localStorage.setItem('tm-lang', lang); } catch {}
+    }
+
+    function readLanguage() {
+      try {
+        const saved = localStorage.getItem('tm-lang');
+        if (saved === 'bn' || saved === 'en') return saved;
+      } catch {}
+      return 'bn';
+    }
+
+    async function api(path, options = {}) {
+      const response = await fetch(path, {
+        method: options.method || 'GET',
+        credentials: 'same-origin',
+        cache: 'no-store',
+        headers: options.body ? { 'Content-Type': 'application/json' } : undefined,
+        body: options.body ? JSON.stringify(options.body) : undefined
+      });
+      let data = {};
+      try { data = await response.json(); } catch {}
+      if (!response.ok) {
+        const error = new Error(data.error || `Request failed (${response.status})`);
+        error.status = response.status;
+        error.code = data.code || '';
+        throw error;
+      }
+      return data;
+    }
+
+    function escapeHtml(value) {
+      return String(value == null ? '' : value).replace(/[&<>"']/g, (character) => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      }[character]));
+    }
+
+    function normalizePhone(value) {
+      let digits = String(value || '').replace(/\D/g, '');
+      if (digits.startsWith('880') && digits.length === 13) digits = `0${digits.slice(3)}`;
+      else if (digits.startsWith('1') && digits.length === 10) digits = `0${digits}`;
+      return digits.slice(0, 11);
+    }
+
+    function formatMoney(value) {
+      const number = Number(value);
+      return `৳${Number.isFinite(number) ? number.toLocaleString('en-US') : '0'}`;
+    }
+
+    function formatDateTime(value) {
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return '';
+      const locale = state.lang === 'bn' ? 'bn-BD' : 'en-GB';
+      try {
+        return new Intl.DateTimeFormat(locale, {
+          timeZone: 'Asia/Dhaka',
+          day: 'numeric',
+          month: 'short',
+          year: 'numeric',
+          hour: 'numeric',
+          minute: '2-digit'
+        }).format(date);
+      } catch {
+        return date.toLocaleString();
+      }
+    }
+
+    function initialsFor(name) {
+      return Array.from(String(name || 'TM').trim()).slice(0, 2).join('') || 'TM';
+    }
+
+    function showToast(message, isError = false) {
+      window.clearTimeout(state.toastTimer);
+      elements.toast.textContent = message;
+      elements.toast.classList.toggle('error', isError);
+      elements.toast.hidden = false;
+      requestAnimationFrame(() => elements.toast.classList.add('show'));
+      state.toastTimer = window.setTimeout(() => {
+        elements.toast.classList.remove('show');
+        window.setTimeout(() => { elements.toast.hidden = true; }, 220);
+      }, 3300);
+    }
+
+    function setFormError(kind, message) {
+      const target = kind === 'signup' ? elements.signupError : elements.loginError;
+      const form = kind === 'signup' ? elements.signupForm : elements.loginForm;
+      if (!message) {
+        target.hidden = true;
+        target.textContent = '';
+        $$('.input', form).forEach(input => input.removeAttribute('aria-invalid'));
+        return;
+      }
+      target.textContent = message;
+      target.hidden = false;
+    }
+
+    function markInvalid(inputs) {
+      inputs.forEach(input => input.setAttribute('aria-invalid', 'true'));
+      if (inputs[0]) inputs[0].focus();
+    }
+
+    function setBusy(button, form, busy) {
+      button.disabled = busy;
+      button.classList.toggle('loading', busy);
+      form.setAttribute('aria-busy', busy ? 'true' : 'false');
+    }
+
+    function switchAuthMode(mode, { updateUrl = true, focus = false } = {}) {
+      state.mode = mode === 'signup' ? 'signup' : 'login';
+      elements.authTabs.forEach((tab) => {
+        const selected = tab.dataset.mode === state.mode;
+        tab.setAttribute('aria-selected', selected ? 'true' : 'false');
+        tab.tabIndex = selected ? 0 : -1;
+      });
+      elements.loginPanel.hidden = state.mode !== 'login';
+      elements.signupPanel.hidden = state.mode !== 'signup';
+      setFormError('login', '');
+      setFormError('signup', '');
+      if (updateUrl && location.protocol !== 'file:') {
+        const url = new URL(location.href);
+        url.pathname = '/account';
+        url.search = state.mode === 'signup' ? '?mode=signup' : '';
+        history.replaceState(null, '', url.pathname + url.search);
+      }
+      if (!state.authenticated) {
+        document.title = `${getText(state.mode === 'signup' ? 'auth.signupTab' : 'auth.loginTab')} — Thunder Maxit`;
+      }
+      if (focus) {
+        const firstInput = state.mode === 'login' ? elements.loginPhone : elements.signupName;
+        window.setTimeout(() => firstInput.focus({ preventScroll: true }), 40);
+      }
+    }
+
+    function updateTabLabels() {
+      // Static labels are handled by data-i18n; this only updates URL state.
+    }
+
+    function updateDynamicLanguage() {
+      document.title = state.authenticated
+        ? getText('meta.title')
+        : `${getText(state.mode === 'signup' ? 'auth.signupTab' : 'auth.loginTab')} — Thunder Maxit`;
+      if (state.authenticated) {
+        elements.welcomeLine.textContent = interpolate(getText('dashboard.welcome'), { name: state.customer ? state.customer.name : '' });
+      }
+      updateSyncLabel();
+      $$('.password-toggle').forEach((button) => {
+        const showing = button.getAttribute('aria-pressed') === 'true';
+        button.setAttribute('aria-label', getText(showing ? 'auth.hidePassword' : 'auth.showPassword'));
+      });
+      elements.langToggle.setAttribute('aria-label', getText('app.language'));
+      elements.logout.setAttribute('aria-label', getText('app.logout'));
+      if (state.authenticated) renderOrders();
+    }
+
+    function applyLanguage(lang, { persist = true } = {}) {
+      state.lang = lang === 'en' ? 'en' : 'bn';
+      document.documentElement.lang = state.lang;
+      $$('[data-i18n]').forEach((el) => {
+        const value = getText(el.dataset.i18n);
+        if (value) el.textContent = value;
+      });
+      $$('[data-i18n-placeholder]').forEach((el) => {
+        const value = getText(el.dataset.i18nPlaceholder);
+        if (value) el.setAttribute('placeholder', value);
+      });
+      $$('[data-i18n-aria-label]').forEach((el) => {
+        const value = getText(el.dataset.i18nAriaLabel);
+        if (value) el.setAttribute('aria-label', value);
+      });
+      updateDynamicLanguage();
+      if (!state.authenticated) {
+        setFormError('login', '');
+        setFormError('signup', '');
+      }
+      if (persist) saveLanguage(state.lang);
+    }
+
+    function updateSyncLabel() {
+      if (!state.lastOrderSync) {
+        elements.lastSynced.textContent = '';
+        return;
+      }
+      const locale = state.lang === 'bn' ? 'bn-BD' : 'en-GB';
+      const time = new Intl.DateTimeFormat(locale, {
+        hour: 'numeric',
+        minute: '2-digit'
+      }).format(state.lastOrderSync);
+      elements.lastSynced.textContent = `${getText('dashboard.lastUpdated')}: ${time}`;
+    }
+
+    function updateUserChip() {
+      if (state.customer) {
+        elements.userChip.hidden = false;
+        elements.userName.textContent = state.customer.name;
+        elements.userAvatar.textContent = initialsFor(state.customer.name).toUpperCase();
+      } else {
+        elements.userChip.hidden = true;
+        elements.userName.textContent = '';
+      }
+      elements.logout.hidden = !state.authenticated;
+    }
+
+    function showAuth(errorMessage = '') {
+      state.authenticated = false;
+      state.customer = null;
+      state.orders = [];
+      state.lastOrderSync = null;
+      stopPolling();
+      elements.boot.hidden = true;
+      elements.dashboard.hidden = true;
+      elements.authView.hidden = false;
+      elements.ordersList.innerHTML = '';
+      elements.ordersList.hidden = false;
+      elements.emptyState.hidden = true;
+      elements.welcomeLine.textContent = '';
+      elements.lastSynced.textContent = '';
+      elements.statTotal.textContent = '0';
+      elements.statActive.textContent = '0';
+      elements.statDelivered.textContent = '0';
+      elements.loginForm.reset();
+      elements.signupForm.reset();
+      $$('.password-toggle').forEach((button) => {
+        const input = document.getElementById(button.dataset.passwordTarget);
+        if (input) input.type = 'password';
+        button.setAttribute('aria-pressed', 'false');
+        button.setAttribute('aria-label', getText('auth.showPassword'));
+      });
+      elements.userName.textContent = '';
+      elements.userAvatar.textContent = 'TM';
+      updateUserChip();
+      switchAuthMode(state.mode === 'signup' ? 'signup' : 'login', { updateUrl: false });
+      if (errorMessage) {
+        switchAuthMode('login', { updateUrl: false });
+        setFormError('login', errorMessage);
+      }
+      window.scrollTo(0, 0);
+      window.setTimeout(() => elements.authTitle.focus({ preventScroll: true }), 40);
+    }
+
+    function showDashboard() {
+      elements.boot.hidden = true;
+      elements.authView.hidden = true;
+      elements.dashboard.hidden = false;
+      updateUserChip();
+      document.title = getText('meta.title');
+      elements.welcomeLine.textContent = interpolate(getText('dashboard.welcome'), { name: state.customer ? state.customer.name : '' });
+      startPolling();
+      window.scrollTo(0, 0);
+      window.setTimeout(() => elements.dashboardTitle.focus({ preventScroll: true }), 40);
+    }
+
+    function startSessionCheck() {
+      state.lang = readLanguage();
+      const params = new URLSearchParams(location.search);
+      state.mode = params.get('mode') === 'signup' ? 'signup' : 'login';
+      applyLanguage(state.lang);
+      switchAuthMode(state.mode, { updateUrl: false });
+
+      api('/api/customer/me')
+        .then((data) => {
+          elements.boot.hidden = true;
+          state.booted = true;
+          if (data.authenticated && data.customer) {
+            state.customer = data.customer;
+            state.authenticated = true;
+            showDashboard();
+            loadOrders();
+          } else {
+            showAuth();
+          }
+        })
+        .catch(() => {
+          elements.boot.hidden = true;
+          state.booted = true;
+          showAuth(getText('auth.errorNetwork'));
+        });
+    }
+
+    function startPolling() {
+      stopPolling();
+      state.pollTimer = window.setInterval(() => {
+        if (state.authenticated && !state.loading && !document.hidden) loadOrders({ silent: true });
+      }, 30000);
+    }
+
+    function stopPolling() {
+      if (state.pollTimer) {
+        window.clearInterval(state.pollTimer);
+        state.pollTimer = null;
+      }
+    }
+
+    function handleAuthSuccess(data, isSignup) {
+      state.customer = data.customer;
+      state.authenticated = true;
+      elements.loginForm.reset();
+      elements.signupForm.reset();
+      setFormError('login', '');
+      setFormError('signup', '');
+      if (location.protocol !== 'file:') history.replaceState(null, '', '/account');
+      showDashboard();
+      showToast(getText(isSignup ? 'auth.successSignup' : 'auth.successLogin'));
+      loadOrders();
+    }
+
+    function authErrorText(error) {
+      if (!error || error.name === 'TypeError') return getText('auth.errorNetwork');
+      if (error.code === 'PHONE_EXISTS') return getText('auth.errorPhoneExists');
+      if (error.code === 'INVALID_CREDENTIALS') return getText('auth.errorCredentials');
+      if (error.code === 'RATE_LIMITED') return getText('auth.errorRate');
+      if (error.code === 'INVALID_PHONE') return getText('auth.errorPhone');
+      return getText('auth.errorGeneric');
+    }
+
+    async function handleLogin(event) {
+      event.preventDefault();
+      setFormError('login', '');
+      const phone = normalizePhone(elements.loginPhone.value);
+      elements.loginPhone.value = phone;
+      const password = elements.loginPassword.value;
+      const invalid = [];
+      if (!/^01[3-9]\d{8}$/.test(phone)) invalid.push(elements.loginPhone);
+      if (!password) invalid.push(elements.loginPassword);
+      if (invalid.length) {
+        setFormError('login', getText(invalid.includes(elements.loginPhone) ? 'auth.errorPhone' : 'auth.errorLoginMissing'));
+        markInvalid(invalid);
+        return;
+      }
+      setBusy(elements.loginButton, elements.loginForm, true);
+      try {
+        const data = await api('/api/customer/login', { method: 'POST', body: { phone, password } });
+        handleAuthSuccess(data, false);
+      } catch (error) {
+        setFormError('login', authErrorText(error));
+        elements.loginPassword.focus();
+      } finally {
+        setBusy(elements.loginButton, elements.loginForm, false);
+      }
+    }
+
+    async function handleSignup(event) {
+      event.preventDefault();
+      setFormError('signup', '');
+      const name = elements.signupName.value.trim();
+      const phone = normalizePhone(elements.signupPhone.value);
+      elements.signupPhone.value = phone;
+      const password = elements.signupPassword.value;
+      const confirm = elements.signupConfirm.value;
+      const invalid = [];
+      if (name.length < 2) invalid.push(elements.signupName);
+      if (!/^01[3-9]\d{8}$/.test(phone)) invalid.push(elements.signupPhone);
+      if (password.length < 8) invalid.push(elements.signupPassword);
+      if (!confirm || confirm !== password) invalid.push(elements.signupConfirm);
+      if (invalid.length) {
+        let message = getText('auth.errorGeneric');
+        if (invalid.includes(elements.signupName)) message = getText('auth.errorName');
+        else if (invalid.includes(elements.signupPhone)) message = getText('auth.errorPhone');
+        else if (invalid.includes(elements.signupPassword)) message = getText('auth.errorPassword');
+        else if (invalid.includes(elements.signupConfirm)) message = getText('auth.errorConfirm');
+        setFormError('signup', message);
+        markInvalid(invalid);
+        return;
+      }
+      setBusy(elements.signupButton, elements.signupForm, true);
+      try {
+        const data = await api('/api/customer/signup', { method: 'POST', body: { name, phone, password } });
+        handleAuthSuccess(data, true);
+      } catch (error) {
+        setFormError('signup', authErrorText(error));
+        if (error.code === 'PHONE_EXISTS') {
+          elements.signupPhone.focus();
+        } else {
+          elements.signupPassword.focus();
+        }
+      } finally {
+        setBusy(elements.signupButton, elements.signupForm, false);
+      }
+    }
+
+    async function logout() {
+      elements.logout.disabled = true;
+      try {
+        await api('/api/customer/logout', { method: 'POST' });
+        state.mode = 'login';
+        showAuth();
+        showToast(getText('auth.signedOut'));
+        if (location.protocol !== 'file:') history.replaceState(null, '', '/account?mode=login');
+      } catch {
+        showToast(getText('auth.errorNetwork'), true);
+      } finally {
+        elements.logout.disabled = false;
+      }
+    }
+
+    async function loadOrders({ silent = false } = {}) {
+      if (!state.authenticated || state.loading) return;
+      state.loading = true;
+      elements.refreshButton.disabled = true;
+      elements.refreshButton.classList.add('loading');
+      if (!silent) {
+        elements.ordersLoading.hidden = false;
+        elements.emptyState.hidden = true;
+      }
+      try {
+        const data = await api('/api/customer/orders');
+        state.orders = Array.isArray(data.orders) ? data.orders : [];
+        state.lastOrderSync = new Date();
+        updateSyncLabel();
+        renderOrders();
+      } catch (error) {
+        if (error.status === 401) {
+          showAuth(getText('auth.sessionExpired'));
+        } else if (!silent) {
+          showToast(getText('dashboard.loadError'), true);
+          if (state.orders.length === 0) {
+            elements.ordersList.hidden = true;
+            elements.emptyState.hidden = false;
+          }
+        }
+      } finally {
+        state.loading = false;
+        elements.refreshButton.disabled = false;
+        elements.refreshButton.classList.remove('loading');
+        elements.ordersLoading.hidden = true;
+      }
+    }
+
+    function renderStats() {
+      const total = state.orders.length;
+      const active = state.orders.filter(order => order.status === 'new' || order.status === 'processing').length;
+      const delivered = state.orders.filter(order => order.status === 'delivered').length;
+      elements.statTotal.textContent = String(total);
+      elements.statActive.textContent = String(active);
+      elements.statDelivered.textContent = String(delivered);
+    }
+
+    function renderOrders() {
+      renderStats();
+      const orders = state.orders;
+      if (orders.length === 0) {
+        elements.ordersList.innerHTML = '';
+        elements.ordersList.hidden = true;
+        elements.emptyState.hidden = false;
+        return;
+      }
+      elements.emptyState.hidden = true;
+      elements.ordersList.hidden = false;
+      elements.ordersList.innerHTML = orders.map(orderCardHtml).join('');
+    }
+
+    function statusFor(order) {
+      return ['new', 'processing', 'delivered', 'cancelled'].includes(order.status) ? order.status : 'new';
+    }
+
+    function statusLabel(status) {
+      return getText(`statusLabels.${status}`);
+    }
+
+    function historyTime(order, status) {
+      const history = Array.isArray(order.statusHistory) ? order.statusHistory : [];
+      const entries = history.filter(entry => entry && entry.status === status && entry.at);
+      if (!entries.length) {
+        if (status === 'new') return order.createdAt;
+        return '';
+      }
+      return entries[entries.length - 1].at;
+    }
+
+    function whatsappProofHref(orderId) {
+      const message = state.lang === 'bn'
+        ? `আসসালামু আলাইকুম, অর্ডার ${orderId}-এর পেমেন্টের স্ক্রিনশট পাঠাচ্ছি।`
+        : `Hello, I am sending the payment screenshot for order ${orderId}.`;
+      return `https://wa.me/${BUSINESS_WHATSAPP}?text=${encodeURIComponent(message)}`;
+    }
+
+    function timelineHtml(order) {
+      const status = statusFor(order);
+      if (status === 'cancelled') {
+        return `
+          <div class="cancelled-banner">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15 9-6 6M9 9l6 6"/></svg>
+            <div>
+              <strong>${escapeHtml(getText('dashboard.cancelledTitle'))}</strong>
+              <span>${escapeHtml(getText('dashboard.cancelledText'))}</span>
+            </div>
+          </div>`;
+      }
+      const currentIndex = status === 'delivered' ? 2 : status === 'processing' ? 1 : 0;
+      const fill = status === 'delivered' ? '100%' : status === 'processing' ? '50%' : '0%';
+      const steps = [
+        { status: 'new', label: getText('dashboard.stepReceived') },
+        { status: 'processing', label: getText('dashboard.stepProcessing') },
+        { status: 'delivered', label: getText('dashboard.stepDelivered') }
+      ];
+      const stepsHtml = steps.map((step, index) => {
+        const done = index < currentIndex || status === 'delivered';
+        const active = index === currentIndex && status !== 'delivered';
+        const time = historyTime(order, step.status);
+        const timeText = time ? formatDateTime(time) : '';
+        return `
+          <div class="tracker-step ${done ? 'done' : active ? 'active' : 'pending'}">
+            <span class="tracker-dot">${done ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>' : String(index + 1).padStart(2, '0')}</span>
+            <strong>${escapeHtml(step.label)}</strong>
+            <span class="tracker-time">${timeText ? escapeHtml(timeText) : '—'}</span>
+          </div>`;
+      }).join('');
+      const pendingNote = status === 'new'
+        ? `<div class="payment-verify-note">
+            <span class="payment-verify-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <div class="payment-verify-copy">
+              <strong>${escapeHtml(getText('dashboard.paymentPendingTitle'))}</strong>
+              <span>${escapeHtml(getText('dashboard.paymentPendingText'))}</span>
+            </div>
+            <a class="payment-proof-link" href="${escapeHtml(whatsappProofHref(order.id))}" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.05 0C5.46 0 .1 5.36.1 11.95c0 2.1.55 4.15 1.6 5.96L0 24l6.25-1.64a11.94 11.94 0 0 0 5.79 1.48h.01c6.58 0 11.94-5.36 11.94-11.95 0-3.19-1.24-6.19-3.47-8.41ZM12.06 21.87h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.71.97.99-3.62-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.46 4.44-9.9 9.9-9.9 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.9 6.99c0 5.46-4.44 9.89-9.91 9.89Zm5.43-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.11 3.22 5.1 4.52.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
+              ${escapeHtml(getText('dashboard.sendScreenshot'))}
+            </a>
+          </div>`
+        : '';
+      return `
+        <div class="progress-block">
+          <span class="progress-label">${escapeHtml(getText('dashboard.progress'))}</span>
+          <div class="tracker">
+            <span class="tracker-line"><span class="tracker-line-fill" style="width:${fill}"></span></span>
+            ${stepsHtml}
+          </div>
+          ${pendingNote}
+        </div>`;
+    }
+
+    function orderCardHtml(order) {
+      const status = statusFor(order);
+      const label = statusLabel(status);
+      const packageName = order.packageName && (order.packageName[state.lang] || order.packageName.en) || order.packageId || '';
+      const payment = getText(`paymentNames.${order.paymentMethod}`) || order.paymentMethod || '—';
+      const orderId = escapeHtml(order.id || '');
+      return `
+        <article class="customer-order" data-status="${status}">
+          <header class="order-head">
+            <div class="order-ident">
+              <span class="order-id">${orderId}</span>
+              <span class="order-date">${escapeHtml(formatDateTime(order.createdAt))}</span>
+            </div>
+            <span class="status-pill ${status}">${escapeHtml(label)}</span>
+          </header>
+          <div class="order-body">
+            <div class="order-package-row">
+              <div>
+                <span class="order-package-label">${escapeHtml(getText('dashboard.package'))}</span>
+                <span class="order-package">${escapeHtml(packageName)}</span>
+              </div>
+              <span class="order-price">${escapeHtml(formatMoney(order.price))}</span>
+            </div>
+            ${timelineHtml(order)}
+            <div class="order-meta">
+              <span class="order-payment"><strong>${escapeHtml(payment)}</strong> · <span class="trx">${escapeHtml(getText('dashboard.transaction'))}: ${escapeHtml(order.transactionId || '—')}</span></span>
+              <a class="support-link" href="/#contact">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8Z"/><path d="M8 9h8M8 13h5"/></svg>
+                ${escapeHtml(getText('dashboard.contact'))}
+              </a>
+            </div>
+          </div>
+        </article>`;
+    }
+
+    /* Events */
+    elements.authTabs.forEach((tab) => {
+      tab.addEventListener('click', () => switchAuthMode(tab.dataset.mode, { focus: true }));
+      tab.addEventListener('keydown', (event) => {
+        if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+        event.preventDefault();
+        const next = state.mode === 'login' ? 'signup' : 'login';
+        switchAuthMode(next);
+        const nextTab = elements.authTabs.find(item => item.dataset.mode === next);
+        if (nextTab) nextTab.focus();
+      });
+    });
+
+    $$('[data-switch-mode]').forEach((button) => {
+      button.addEventListener('click', () => switchAuthMode(button.dataset.switchMode, { focus: true }));
+    });
+
+    $$('.password-toggle').forEach((button) => {
+      button.addEventListener('click', () => {
+        const input = document.getElementById(button.dataset.passwordTarget);
+        if (!input) return;
+        const showing = input.type === 'text';
+        input.type = showing ? 'password' : 'text';
+        button.setAttribute('aria-pressed', showing ? 'false' : 'true');
+        button.setAttribute('aria-label', getText(showing ? 'auth.showPassword' : 'auth.hidePassword'));
+        input.focus();
+      });
+    });
+
+    [elements.loginPhone, elements.signupPhone].forEach((input) => {
+      input.addEventListener('input', () => {
+        input.value = normalizePhone(input.value);
+        input.removeAttribute('aria-invalid');
+      });
+    });
+
+    [elements.loginForm, elements.signupForm].forEach((form) => {
+      form.addEventListener('input', (event) => {
+        if (event.target.classList.contains('input')) {
+          event.target.removeAttribute('aria-invalid');
+          const error = form === elements.loginForm ? elements.loginError : elements.signupError;
+          if (error && !error.hidden) {
+            error.hidden = true;
+            error.textContent = '';
+          }
+        }
+      });
+    });
+
+    elements.loginForm.addEventListener('submit', handleLogin);
+    elements.signupForm.addEventListener('submit', handleSignup);
+    elements.logout.addEventListener('click', logout);
+    elements.refreshButton.addEventListener('click', () => loadOrders());
+    elements.langToggle.addEventListener('click', () => {
+      applyLanguage(state.lang === 'bn' ? 'en' : 'bn');
+    });
+
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && state.authenticated) loadOrders({ silent: true });
+    });
+
+    window.addEventListener('beforeunload', stopPolling);
+
+    startSessionCheck();
+  </script>
+</body>
+</html>
